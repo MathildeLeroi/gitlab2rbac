@@ -819,7 +819,7 @@ def main() -> None:
                             f"Invalid value type for {gitlab_path}: expected list of strings, got {type(k8s_namespaces)}"
                         )
                         raise ValueError(
-                            f"All values in GITLAB_NAMESPACE_MAPPING must be arrays"
+                            "All values in GITLAB_NAMESPACE_MAPPING must be arrays"
                         )
                 logging.info(f"Loaded namespace mapping: {GITLAB_NAMESPACE_MAPPING}")
             except json.JSONDecodeError as e:
