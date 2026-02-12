@@ -279,10 +279,8 @@ group(fullPath: $namespace) {
                 },
                 use_json=True,
             )
-            client = Client(
-                transport=transport, fetch_schema_from_transport=True
-            )
-            
+            client = Client(transport=transport, fetch_schema_from_transport=False)
+
             for namespace_obj, k8s_namespace in namespace_tuples:
                 _start = time()
                 variable_values = {"namespace": namespace_obj.name}
